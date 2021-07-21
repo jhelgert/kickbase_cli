@@ -89,12 +89,11 @@ def cli(*args, **kwargs):
     """ Extrem simples Kickbase CLI. (Leider ohne Lewandowskicheat) """
     kb = KickbaseCL()
     kb.login("deine_login_mail", "dein_pw")
-    # print(type(team))
-    if "market" in kwargs:
+    if kwargs["market"]:
         kb.print_market_stats(only_increasing=kwargs['only_increasing'])
-    if "team" in kwargs:
+    if kwargs["team"]:
         kb.print_team_stats(only_increasing=kwargs['only_increasing'])
-    if "matchday" in kwargs:
+    if kwargs["matchday"]:
         kb.print_live_matchday_punkte()
 
 
