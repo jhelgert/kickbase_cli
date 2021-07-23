@@ -23,7 +23,7 @@ class KickbaseCL(Kickbase):
         vals = np.ceil(1e3*(market_values[-days:] - market_values[-days-1:-1]))
         # Trendstring der Marktwertentwicklung zur Ausgabe
         trendstr = "".join(f"[green]↑{x:3.0f}T " if x >=
-                           0.0 else f"[green]↑{-x:3.0f}T " for x in vals)
+                           0.0 else f"[red]↓{-x:3.0f}T " for x in vals)
         return name, buy_price, market_values, vals, trendstr, eta_h, eta_mins
 
     def print_team_stats(self, days: int = 3, only_increasing: bool = False):
