@@ -32,3 +32,8 @@ Options:
   --help             Show this message and exit.
 ```
 
+
+## Mögliche Erweiterungen
+
+- Bieten auf einen Spieler
+- Verkaufen eines Spielers
