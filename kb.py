@@ -36,10 +36,10 @@ class KickbaseCL(Kickbase):
                 if only_increasing and vals[-1] < 0.0:
                     continue
                 # Gewinn / Verlust seit Kauf des Spielers?
-                gewinn = np.abs(1e-6*buy_price - market_values[-1])
+                gewinn = market_values[-1] - 1e-6*buy_price
                 g_sign = "[red]↓" if gewinn < 0.0 else "[green]↑"
                 # Ausgabe
-                rstr = f"{trendstr} [white]({g_sign}{gewinn:5.2f} [white]Mio | " \
+                rstr = f"{trendstr} [white]({g_sign}{np.abs(gewinn):5.2f} [white]Mio | " \
                     + f"{market_values[-1]: 4.1f} Mio MW | " \
                     + f"{player.totalPoints:4d}P | " \
                     + f"Ø {player.averagePoints:3d}P) {name} "
