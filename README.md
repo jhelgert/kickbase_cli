@@ -3,14 +3,12 @@
 
 1. Installieren der benötigten Pakete:
 ``` bash
-pip3 install click rich numpy 
+python3 -m pip install click rich numpy 
 ```
-2. [Diesen Fork](https://github.com/jhelgert/kickbase-api-python) der Kickbase API clonen und installieren. Dazu einfach das Repo klonen und
-innerhalb des Ordners via
+2. [Diesen Fork](https://github.com/jhelgert/kickbase-api-python) der Kickbase API clonen und installieren:
 ``` bash
-python3 setup.py install
+python3 -m pip install git+https://github.com/jhelgert/kickbase-api-python
 ``` 
-installieren
 
 3. Innerhalb der `kb.py` in Zeile 91 die Logindaten des Kickbase accounts
 eintragen.
